@@ -1,0 +1,32 @@
+.navbar {
+  position: fixed;
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  transition: all 0.5s ease-in;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar_black {
+  background-color: #111;
+}
+
+.logo {
+  margin: 1rem;
+  color: white;
+  font-size: 18px;
+}
+
+.nav_icons {
+  display: flex;
+  margin: 1rem;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.nav_icons .MuiSvgIcon-root {
+  fill: white;
+}

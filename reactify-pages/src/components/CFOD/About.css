@@ -1,0 +1,26 @@
+.about {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.about .MuiSvgIcon-root {
+  fill: grey;
+  width: 30px;
+}
+
+.about .MuiSvgIcon-root:hover {
+  fill: lightseagreen;
+}
+
+.about a {
+  color: #00b2ff;
+  text-decoration: none;
+}
+
+.about a:hover {
+  color: gray;
+}

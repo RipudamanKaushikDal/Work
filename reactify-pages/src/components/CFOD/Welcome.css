@@ -1,0 +1,18 @@
+.welcome {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  color: black;
+}
+
+.welcome .MuiSvgIcon-root {
+  fill: grey;
+  width: 30px;
+}
+
+.welcome .MuiSvgIcon-root:hover {
+  fill: red;
+}

@@ -1,0 +1,13 @@
+.app {
+  color: whitesmoke;
+}
+
+.multi_cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  justify-content: space-around;
+  border-top: 2px solid rgba(232, 232, 232, 1);
+  border-bottom: 2px solid rgba(232, 232, 232, 1);
+}
