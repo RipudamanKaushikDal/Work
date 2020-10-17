@@ -1,0 +1,7 @@
+1. Put the pictures of the people you want to identify in a single folder like --> [Dataset Foldername]/[Name of the person]/photos
+2. Run pip install opencv-contrib-python
+3. Run pip install dlib (only after you have installed cmake)
+4. Run pip install face_recognition
+5. Run the program with --> python facerecognition.py -i  [Dataset Foldername] -e encodings.pickle -p [Name of the person you want to surprise]
+-d [hog or cnn(if you have nvidia gpu)]
+6. Run python facerecognition.py -h for help
