@@ -5,11 +5,14 @@ import './Banner.css'
 
 function Banner({data}) {
 
-    // Code to choose a random data object from the dummy Static Data  
+    // Code to choose a random data object from the dummy Static Data everytime it loads
+    
+    // Create a random integer between 1 and length of data array
     let randomInt = Math.floor(
         Math.random(0,1) * (data.length - 1)
       );
 
+      // Chosen data from the Static data
     const selectedData = data[randomInt]
 
 

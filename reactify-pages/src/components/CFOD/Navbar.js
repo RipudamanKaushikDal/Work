@@ -2,9 +2,12 @@
 import React,{useState,useEffect} from 'react'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import PersonIcon from '@material-ui/icons/Person';
+import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton'
 import Tooltip from '@material-ui/core/Tooltip'
+import {drawerContents} from './StaticData'
 import './Navbar.css'
+import SideBar from './SideBar';
 
 
 function NavBar() {
@@ -13,6 +16,12 @@ function NavBar() {
     The variable is stored as showNav and function as setShowNav (which is used to set/change the variable). The state 
     is  intialized as false*/
     const [showNav, setShowNav] = useState(false)
+
+    // Maintain 'state' for leftDrawer, initialized as false
+    const [leftDrawer, setLeftDrawer] = useState(false)
+
+    // Maintain 'state' for rightDrawer, intialized as false
+    const [rightDrawer, setRightDrawer] = useState(false)
 
 
     /* React hook to trigger effects when a component mounts, dismounts and updates. We are adding an event listener 
@@ -28,6 +37,21 @@ function NavBar() {
     },[]) /* [] is called dependency array and includes the component to check, for triggers. Empty array means
                 the effect will run only once. If not provided, the program will go into infinite loop of renders */
 
+
+    // Function to change the leftDrawer state to false on mouse-over event            
+    const changeLeftState = () => {
+        if (leftDrawer === true) {
+            setLeftDrawer(false)
+        }
+    }
+
+    // Function to change the rightDrawer state to false on mouse-over event 
+    const changeRightState = () => {
+        if (rightDrawer === true) {
+            setRightDrawer(false)
+        }
+    }
+
     return (
 
         // Conditional CSS and component rendering 
@@ -37,19 +61,33 @@ function NavBar() {
              <h1>CFOD</h1>
             </div>
 
+            {/* Material-UI Icons rendered inside Tooltip component to display help-text on hover*/}
+
             <div className="nav_icons">
+                
                 <Tooltip title="Log In">
                 <IconButton >
                     <PersonIcon />
                 </IconButton>
                 </Tooltip>
                 <Tooltip title="Profile">
-                <IconButton >
+                <IconButton onClick={() => setLeftDrawer(true)} onMouseOver={changeLeftState}>
                     <ExitToAppIcon  />
+                </IconButton>
+                </Tooltip>
+                <Tooltip title="Dashboard">
+                <IconButton onClick={() => setRightDrawer(true)} onMouseOver={changeRightState}>
+                    <MenuIcon  />
                 </IconButton>
                 </Tooltip>
                 
             </div>
+
+            {/* Render Drawers only when their state is true, both the Drawers are rendered only through a single
+            'Sidebar' component */}
+
+            {leftDrawer && <SideBar direction="left" openDrawer={leftDrawer} drawerContents={drawerContents} />}
+            {rightDrawer && <SideBar direction="right" openDrawer={rightDrawer} drawerContents={drawerContents} />}
             
         </div>
     )

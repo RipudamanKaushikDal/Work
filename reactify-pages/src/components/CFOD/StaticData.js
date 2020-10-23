@@ -1,8 +1,11 @@
+import React from "react"
+import PersonOutlinedIcon from '@material-ui/icons/PersonOutlined';
+
 
 // Dummy Data for the webpage
 // Soon to be replaced by axios
 
-const data = [
+export const data = [
     {
         image:"https://cdn.pling.com/img/d/b/a/4/3296e5dad944d313478fc911c85c192e61eb.jpg",
         title:"Start Now",
@@ -25,4 +28,50 @@ const data = [
     }
 ]
 
-export default data
+
+// Data for the menu items
+
+export const drawerContents = [
+    {
+        header:"Navigation Links",
+        subHeader: [
+            {
+                id:1,
+                title:"title1",
+                icon: <PersonOutlinedIcon />
+            },
+            {
+                id:2,
+                title:"title2",
+                icon: <PersonOutlinedIcon />
+            },
+            {
+                id:3,
+                title:"title3",
+                icon: <PersonOutlinedIcon />
+            }
+
+        ]
+    },
+    {
+        header: "About Us",
+        subHeader: [
+         
+            {
+                id:1,
+                title:"title1",
+                icon: <PersonOutlinedIcon />
+            },
+            {
+                id:2,
+                title:"title2",
+                icon: <PersonOutlinedIcon />
+            },
+            {
+                id:3,
+                title:"title3",
+                icon: <PersonOutlinedIcon />
+            }
+        ]
+    }
+]

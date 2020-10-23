@@ -5,7 +5,7 @@ import Banner from "./components/CFOD/Banner"
 import Cards from "./components/CFOD/Cards"
 import Welcome from "./components/CFOD/Welcome"
 import About from "./components/CFOD/About"
-import info from './components/CFOD/StaticData'
+import {data} from './components/CFOD/StaticData'
 import './App.css'
 
 
@@ -18,11 +18,11 @@ function App() {
 
     <div className="app">
       <Navbar />
-      <Banner data = {info} />
+      <Banner data = {data} />
       <Welcome />
       <div className="multi_cards">
         {
-          info.map((program,index) => (
+          data.map((program,index) => (
             <Cards key= {index} data = {program} />
           ))
         }

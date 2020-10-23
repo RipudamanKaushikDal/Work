@@ -1,0 +1,32 @@
+.drawer .MuiDrawer-root {
+  width: 220px;
+}
+
+.drawer .MuiDrawer-paper {
+  width: 220px;
+  background-color: #111;
+  color: white;
+  opacity: 0.9;
+}
+
+.drawer .MuiSvgIcon-root {
+  fill: white;
+}
+
+.drawer_header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  color: white;
+}
+
+.drawer_contents {
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+}
+
+.drawer_contents .list_items:hover {
+  text-decoration: none;
+  background-color: tomato;
+}
