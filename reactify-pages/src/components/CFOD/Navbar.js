@@ -58,7 +58,12 @@ function NavBar() {
         <div className={`navbar ${showNav && "navbar_black"}`}>
 
             <div className="logo">
-             <h1>CFOD</h1>
+                <Tooltip title="Profile">
+                <IconButton onClick={() => setLeftDrawer(true)} onMouseOver={changeLeftState}> 
+                    <MenuIcon fontSize="large" />
+                </IconButton>
+                </Tooltip>
+                <h1>CFOD</h1>
             </div>
 
             {/* Material-UI Icons rendered inside Tooltip component to display help-text on hover*/}
@@ -70,16 +75,12 @@ function NavBar() {
                     <PersonIcon />
                 </IconButton>
                 </Tooltip>
-                <Tooltip title="Profile">
-                <IconButton onClick={() => setLeftDrawer(true)} onMouseOver={changeLeftState}>
+                <Tooltip title="Dashboard">
+                <IconButton onClick={() => setRightDrawer(true)} onMouseOver={changeRightState}>
                     <ExitToAppIcon  />
                 </IconButton>
                 </Tooltip>
-                <Tooltip title="Dashboard">
-                <IconButton onClick={() => setRightDrawer(true)} onMouseOver={changeRightState}>
-                    <MenuIcon  />
-                </IconButton>
-                </Tooltip>
+                
                 
             </div>
 

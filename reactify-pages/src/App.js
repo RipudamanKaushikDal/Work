@@ -2,7 +2,7 @@
 import React from 'react';
 import Navbar from "./components/CFOD/Navbar"
 import Banner from "./components/CFOD/Banner"
-import Cards from "./components/CFOD/Cards"
+import Details from "./components/CFOD/Details"
 import Welcome from "./components/CFOD/Welcome"
 import About from "./components/CFOD/About"
 import {data} from './components/CFOD/StaticData'
@@ -23,7 +23,7 @@ function App() {
       <div className="multi_cards">
         {
           data.map((program,index) => (
-            <Cards key= {index} data = {program} />
+            <Details key= {index} data = {program} />
           ))
         }
       </div>

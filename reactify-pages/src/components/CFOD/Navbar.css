@@ -15,9 +15,12 @@
 }
 
 .logo {
+  display: flex;
   margin: 1rem;
+  padding-left: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
   color: white;
-  font-size: 18px;
 }
 
 .nav_icons {
@@ -27,6 +30,6 @@
   flex-direction: row;
 }
 
-.nav_icons .MuiSvgIcon-root {
+.navbar .MuiSvgIcon-root {
   fill: white;
 }
